@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Title="InjectCss"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ClientSideComponentId="370a00b2-58f8-4953-b577-57be820c4d47"
+        ClientSideComponentProperties="{&quot;cssurl&quot;:&quot;/Shared%20Documents/custom.css&quot;}">
+    </CustomAction>
+</Elements>
