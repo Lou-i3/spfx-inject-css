@@ -1,33 +1,46 @@
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
-    "solution": {
-        "name": "spfx-inject-css-client-side-solution",
-        "id": "b3881f4b-6b07-466b-92ac-ad72e48f9353",
-        "version": "1.0.0.0",
-        "includeClientSideAssets": true,
-        "skipFeatureDeployment": false,
-        "isDomainIsolated": false,
-        "developer": {
-            "name": "",
-            "websiteUrl": "",
-            "privacyUrl": "",
-            "termsOfUseUrl": "",
-            "mpnId": "Undefined-1.13.1"
-        },
-        "features": [{
-            "title": "Inject CSS Application Extension",
-            "description": "Injects custom CSS to SharePoint Online site. Default css location /SiteAssets/css/custom.css",
-            "id": "43ea05bf-0bd3-4280-a469-d5cd51f6696d",
-            "version": "1.0.0.0",
-            "assets": {
-                "elementManifests": [
-                    "elements.xml",
-                    "ClientSideInstance.xml"
-                ]
-            }
-        }]
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-inject-css-client-side-solution",
+    "id": "fe1ba1c3-80c6-4e76-8dc5-893258ca9c97",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": false,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.15.2"
     },
-    "paths": {
-        "zippedPackage": "solution/spfx-inject-css.sppkg"
-    }
+    "metadata": {
+      "shortDescription": {
+        "default": "Injects custom CSS to SharePoint Online site. Default css location /SiteAssets/css/custom.css"
+      },
+      "longDescription": {
+        "default": "Injects custom CSS to SharePoint Online site. Default css location /SiteAssets/css/custom.css"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "Inject CSS Application Extension",
+        "description": "Injects custom CSS to SharePoint Online site. Default css location /SiteAssets/css/custom.css",
+        "id": "141283a1-bf8a-4dcb-9e87-8162c46d01d9",
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml",
+            "ClientSideInstance.xml"
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-inject-css.sppkg"
+  }
 }

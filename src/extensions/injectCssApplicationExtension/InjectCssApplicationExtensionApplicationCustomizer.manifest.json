@@ -1,8 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-extension-manifest.schema.json",
 
-  "id": "370a00b2-58f8-4953-b577-57be820c4d47",
-  "alias": "InjectCssApplicationCustomizer",
+  "id": "1ef6837f-6aa1-462e-92b4-7c38a6780c06",
+  "alias": "InjectCssApplicationExtensionApplication",
   "componentType": "Extension",
   "extensionType": "ApplicationCustomizer",
 
