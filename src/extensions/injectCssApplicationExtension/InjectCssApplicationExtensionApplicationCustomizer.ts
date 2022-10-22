@@ -1,13 +1,13 @@
-import { Log } from '@microsoft/sp-core-library';
+// import { Log } from '@microsoft/sp-core-library';
 import {
   BaseApplicationCustomizer
 } from '@microsoft/sp-application-base';
-import { Dialog } from '@microsoft/sp-dialog';
+// import { Dialog } from '@microsoft/sp-dialog';
 
-import * as strings from 'InjectCssApplicationExtensionApplicationCustomizerStrings';
-import { SPHttpClient, SPHttpClientConfiguration, SPHttpClientResponse, ISPHttpClientConfiguration } from '@microsoft/sp-http';
+// import * as strings from 'InjectCssApplicationExtensionApplicationCustomizerStrings';
+// import { SPHttpClient, SPHttpClientConfiguration, SPHttpClientResponse, ISPHttpClientConfiguration } from '@microsoft/sp-http';
 
-const LOG_SOURCE: string = 'InjectCssApplicationExtensionApplicationCustomizer';
+// const LOG_SOURCE: string = 'InjectCssApplicationExtensionApplicationCustomizer';
 
 /**
  * If your command set uses the ClientSideComponentProperties JSON input,
@@ -25,6 +25,8 @@ export default class InjectCssApplicationExtensionApplicationCustomizer
 
     public async onInit(): Promise<void> {
       // Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
+
+      console.log("Inject CSS App Customizer started, v1.1");
   
       const currentSiteUrl: string = this.context.pageContext.web.absoluteUrl;
       const cssUrlProp: string = this.properties.cssurl;
@@ -32,10 +34,10 @@ export default class InjectCssApplicationExtensionApplicationCustomizer
       // console.log(`Property for CSS is ${appSettings.cssUrl}`);
       // console.log(`Property for Site URL is ${appSettings.siteUrl}`);
   
-      var listName = "ConfigMapping";
-      var configKey = "CustomCssFileUrl";
+      // const listName = "ConfigMapping";
+      // const configKey = "CustomCssFileUrl";
   
-      var cssUrl;
+      let cssUrl;
       if (cssUrlProp) {
         cssUrl = cssUrlProp;
       } 
@@ -58,13 +60,13 @@ export default class InjectCssApplicationExtensionApplicationCustomizer
   
       if (cssUrl) {
         // inject the style sheet
-        const head: any = document.getElementsByTagName("head")[0] || document.documentElement;
-        let customStyle: HTMLLinkElement = document.createElement("link");
+        const head: HTMLHeadElement = document.getElementsByTagName("head")[0] || document.documentElement;
+        const customStyle: HTMLLinkElement = document.createElement("link");
         customStyle.href = cssUrl;
         console.log("CSS Url:" + customStyle.href);
         customStyle.rel = "stylesheet";
         customStyle.type = "text/css";
-        head.insertAdjacentElement("beforeEnd", customStyle);
+        head.insertAdjacentElement("beforeend", customStyle);
       }
   
       return Promise.resolve();
